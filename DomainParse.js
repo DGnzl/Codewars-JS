@@ -14,6 +14,7 @@ function domainParse(str) {
 console.log(domainParse('www.cnet.com'))
 console.log(domainParse('cnet.com'))
 console.log(domainParse('https://cnet.com'))
+console.log(domainParse('http://cnet.com/reviews'))
 
 // function domainName(url){
 // 	return url.replace('http://', '').replace('https://', '').replace('www.', '').split('.').shift()
