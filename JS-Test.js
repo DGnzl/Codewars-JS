@@ -1,9 +1,26 @@
-console.log("Test")
+let bestColors= ['green', 'blue', 'yellow', 'red']
 
-function arrayTest(arr) {
-    arr.forEach(element => {
-        console.log(element)
-    });
+bestColors.forEach((el) => console.log(el))
+
+let nums = [1,2,3,4,5]
+
+function mult(arr) {
+    let product = 1
+    arr.forEach((x) => product *= x)
+    return product
 }
 
-arrayTest([1,"five", 2.65])
+console.log(mult(nums))
+
+let bestBands = ['Metallica', 'Foo Fighters', 'Tool']
+
+let removed = bestBands.shift()
+
+console.log(removed)
+console.log(bestBands)
+
+bestBands.unshift(removed)
+bestBands.push(removed)
+
+console.log(removed)
+console.log(bestBands)
