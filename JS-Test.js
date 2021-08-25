@@ -24,3 +24,5 @@ bestBands.push(removed)
 
 console.log(removed)
 console.log(bestBands)
+
+bestBands.push('Green Day')
