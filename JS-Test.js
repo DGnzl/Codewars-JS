@@ -1,28 +1,29 @@
-let bestColors= ['green', 'blue', 'yellow', 'red']
+let x = 5
+x = 'HALLOWEEN'
+console.log(x)
 
-bestColors.forEach((el) => console.log(el))
+let y = 'hi'
+console.log(y)
 
-let nums = [1,2,3,4,5]
-
-function mult(arr) {
-    let product = 1
-    arr.forEach((x) => product *= x)
-    return product
+function Five(a,b,c,d,e) {
+    return 100 - a - b - c - d- e
 }
 
-console.log(mult(nums))
+console.log(Five(10,11,12,1,25))
 
-let bestBands = ['Metallica', 'Foo Fighters', 'Tool']
+function Three(a,b,c) {
+    return Math.max(a,b,c)
+}
 
-let removed = bestBands.shift()
+console.log(Three(10,25,35))
 
-console.log(removed)
-console.log(bestBands)
+function Flip() {
+    if (Math.floor(Math.random() * 2) == 1) {
+        return "Heads"
+    }
+    else {
+        return "Tails"
+    }
+}
 
-bestBands.unshift(removed)
-bestBands.push(removed)
-
-console.log(removed)
-console.log(bestBands)
-
-bestBands.push('Green Day')
+console.log(Flip())
