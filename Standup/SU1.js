@@ -112,4 +112,25 @@ function ArrayPairs(arr, sum) {
     return ans
 }
 
-console.log(ArrayPairs([1, 2, 2, 3, 4], 4))
+//console.log(ArrayPairs([1, 2, 2, 3, 4], 4))
+
+function MaxProfit(arr) {
+    let minPrice = Number.POSITIVE_INFINITY
+    let profit = 0
+    arr.forEach(x => (minPrice > x) ? minPrice = x : profit = Math.max(profit, x - minPrice))
+    return profit
+}
+
+//console.log(MaxProfit([7,1,5,3,6,4]))
+//console.log(MaxProfit([7,6,4,3,1]))
+
+function MajorityElement(arr) {
+    let dict = {}
+    arr.forEach(x => (x in dict) ? dict[x] += 1 : dict[x] = 1)
+    return Object.keys(dict).reduce((a,b) => dict[a] > dict[b] ? a : b)
+}
+
+//console.log(MajorityElement([3,2,3]))
+//console.log(MajorityElement([2,2,1,1,1,2,2]))
+
+// Next is Aug 23
