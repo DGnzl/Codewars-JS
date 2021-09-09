@@ -60,7 +60,46 @@ function ReverseArray(arr) {
     }
 }
 let arr = [1,2,3,4,5,6,'a',1.5]
-ReverseArray(arr)
-console.log(arr)
+//ReverseArray(arr)
+//console.log(arr)
 
-//Next is Aug 16
+function ReversePhrase(str) {
+    let words = []
+    str.split(' ').forEach(x => {
+        let temp = ''
+        for (let i = 0; i < x.length; i++) {
+            temp += x[x.length - 1 - i];
+        }
+        words.push(temp)
+    })
+    return words.join(' ')
+}
+//console.log(ReversePhrase('Should reverse words'))
+//console.log(ReversePhrase(''))
+
+const magazine =
+ "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+
+function ransomNote(str) {
+    let dict = {}
+    magazine.replaceAll(',', '').split(' ').forEach(x => {
+        if (!(x in dict)) {
+            dict[x] = true
+        }
+    })
+    str.split(' ').forEach(x => {
+        if (!(x in dict)) {
+            return false
+        }
+    })
+    return true
+}
+
+console.log(ransomNote('sit ad est sint'))
+console.log(ransomNote('fail'))
+
+
+// ransomNote("sit ad est sint", magazine), true);
+// ransomNote("sit ad est love", magazine), false);
+// ransomNote("sit ad est sint in in", magazine), true);
+// ransomNote("sit ad est sint in in in in", magazine), false);
