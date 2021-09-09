@@ -87,19 +87,29 @@ function ransomNote(str) {
             dict[x] = true
         }
     })
+    let allWordsFound = true
     str.split(' ').forEach(x => {
         if (!(x in dict)) {
-            return false
+            allWordsFound = false
         }
     })
-    return true
+    return allWordsFound
 }
 
-console.log(ransomNote('sit ad est sint'))
-console.log(ransomNote('fail'))
+//console.log(ransomNote('sit ad est sint in in')) //Pass
+//console.log(ransomNote('fail')) //Fail
 
+function ArrayPairs(arr, sum) {
+    let ans = []
+    let work = []
+    for(let i = 0; i < arr.length; i++) {
+        let rem = sum - arr[i]
+        if (work.includes(rem)) {
+            ans.push([arr[i], rem])
+        }
+        work.push(arr[i])
+    }
+    return ans
+}
 
-// ransomNote("sit ad est sint", magazine), true);
-// ransomNote("sit ad est love", magazine), false);
-// ransomNote("sit ad est sint in in", magazine), true);
-// ransomNote("sit ad est sint in in in in", magazine), false);
+console.log(ArrayPairs([1, 2, 2, 3, 4], 4))
