@@ -160,5 +160,22 @@ function FindPairs2(arr) {
     return ans
 }
 
-console.log(FindPairs2([1,2,3,1,1,3,1]))
-console.log(FindPairs2([1,1,1,1]))
+//console.log(FindPairs2([1,2,3,1,1,3,1]))
+//console.log(FindPairs2([1,1,1,1]))
+
+function FindDuplicateNum(arr) {
+    let map = {}
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] in map) {
+            return true
+        }
+        else {
+            map[arr[i]] = true
+        } 
+    }
+    return false
+}
+
+console.log(FindDuplicateNum([1,2,3,4,1]))
+
+//Next Aug 25
