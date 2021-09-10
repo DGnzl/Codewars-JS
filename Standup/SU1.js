@@ -147,16 +147,18 @@ function FindPairs(arr) {
 
 function FindPairs2(arr) {
     let map = {}
+    let ans = 0
     for(let i = 0; i < arr.length; i++) {
         if (arr[i] in map) {
-            console.log(`found ${arr[i]}`)
+            ans += map[arr[i]]
+            map[arr[i]]++
         }
         else {
-            console.log('added')
-            map[arr[i]] = i
+            map[arr[i]] = 1
         }
     }
-    return Object.keys(map).length
+    return ans
 }
 
-console.log(FindPairs2([1,2,3,1,1,3]))
+console.log(FindPairs2([1,2,3,1,1,3,1]))
+console.log(FindPairs2([1,1,1,1]))
