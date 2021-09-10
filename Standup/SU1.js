@@ -133,4 +133,30 @@ function MajorityElement(arr) {
 //console.log(MajorityElement([3,2,3]))
 //console.log(MajorityElement([2,2,1,1,1,2,2]))
 
-// Next is Aug 23
+function FindPairs(arr) {
+    let ans = []
+    for (let i = 0; i < arr.length - 1; i++) {
+        for(let j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                ans.push([i,j])
+            }
+        }
+    }
+    return ans.length
+}
+
+function FindPairs2(arr) {
+    let map = {}
+    for(let i = 0; i < arr.length; i++) {
+        if (arr[i] in map) {
+            console.log(`found ${arr[i]}`)
+        }
+        else {
+            console.log('added')
+            map[arr[i]] = i
+        }
+    }
+    return Object.keys(map).length
+}
+
+console.log(FindPairs2([1,2,3,1,1,3]))
