@@ -176,6 +176,18 @@ function FindDuplicateNum(arr) {
     return false
 }
 
-console.log(FindDuplicateNum([1,2,3,4,1]))
+//console.log(FindDuplicateNum([1,2,3,4,1]))
 
-//Next Aug 25
+function JewelsStones (jewels, stones) {
+    let map = {}
+    jewels.split('').forEach(x => map[x] = true)
+    let ans = 0
+    stones.split('').forEach(x => {
+        if (x in map) {
+            ans += 1 
+        }
+    })
+    return ans
+}
+
+console.log(JewelsStones('aA', 'aAAbbbbb'))
