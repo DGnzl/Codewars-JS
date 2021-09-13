@@ -190,4 +190,23 @@ function JewelsStones (jewels, stones) {
     return ans
 }
 
-console.log(JewelsStones('aA', 'aAAbbbbb'))
+//console.log(JewelsStones('aA', 'aAAbbbbb'))
+
+function FibonacciLoop(n) {
+    if (n < 3) {
+        return 1
+    }
+    else {
+        let prev = 1
+        let ans = 2
+        for (let i = 0; i < n - 3; i++) {
+            ans = prev + ans
+            prev = ans - prev
+        }
+        return ans
+    }
+}
+
+for (let i = 1; i < 10; i++) {
+    console.log(FibonacciLoop(i))
+}
