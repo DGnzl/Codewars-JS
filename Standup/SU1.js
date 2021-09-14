@@ -207,9 +207,9 @@ function FibonacciLoop(n) {
     }
 }
 
-for (let i = 1; i < 10; i++) {
-    console.log(FibonacciLoop(i))
-}
+// for (let i = 1; i < 10; i++) {
+//     console.log(FibonacciLoop(i))
+// }
 
 function FibonacciRecursion(n) {
     if (n <= 2) {
@@ -219,6 +219,40 @@ function FibonacciRecursion(n) {
         return FibonacciRecursion(n - 1) + FibonacciRecursion(n - 2)
     }
 }
-for (let i = 1; i < 10; i++) {
-    console.log(FibonacciRecursion(i))
+// for (let i = 1; i < 10; i++) {
+//     console.log(FibonacciRecursion(i))
+// }
+
+function Factorial(n) {
+    if (n <= 1) {
+        return 1
+    }
+    else {
+        return n * Factorial(n - 1) 
+    }
 }
+
+//console.log(Factorial(10))
+
+function GCD(a, b) {
+    return b == 0 ? a : GCD(b, a % b)
+}
+
+//console.log(GCD(30,12))
+
+class Queue {
+    constructor() {
+        this.items = []
+    }
+    enqueue(item) {
+        this.items.push(item)
+    }
+    dequeue() {
+        return this.items.shift()
+    }
+    size() {
+        return this.items.length
+    }
+}
+
+// Next is Sept 14
