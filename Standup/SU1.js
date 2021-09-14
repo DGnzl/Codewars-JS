@@ -199,7 +199,7 @@ function FibonacciLoop(n) {
     else {
         let prev = 1
         let ans = 2
-        for (let i = 0; i < n - 3; i++) {
+        for (let i = 3; i < n; i++) {
             ans = prev + ans
             prev = ans - prev
         }
@@ -209,4 +209,16 @@ function FibonacciLoop(n) {
 
 for (let i = 1; i < 10; i++) {
     console.log(FibonacciLoop(i))
+}
+
+function FibonacciRecursion(n) {
+    if (n <= 2) {
+        return 1
+    }
+    else {
+        return FibonacciRecursion(n - 1) + FibonacciRecursion(n - 2)
+    }
+}
+for (let i = 1; i < 10; i++) {
+    console.log(FibonacciRecursion(i))
 }
