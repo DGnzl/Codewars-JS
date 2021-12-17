@@ -1,7 +1,7 @@
-function reverseWords(str){
-    console.log(str.split(' ').reverse().join(' '))
-    console.log();
-    
-}
-console.log("Hello world")
-reverseWords("Hello there")
+function reverseWords(str) {
+    let words = str.split(' ')
+    for(let i = 0; i < words.length; i++) {
+      words[i] = (words[i].split('').reverse().join(''))
+    }
+    return words.join(' ')
+  }
