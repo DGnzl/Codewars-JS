@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/SumOdds.js"
+            "program": "${workspaceFolder}/DeepCount.js"
         }
     ]
 }
