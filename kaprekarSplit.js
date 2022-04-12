@@ -9,6 +9,7 @@ function kaprekarSplit(n){
     return -1
   }
 
+  
 Test.assertSimilar(kaprekarSplit(1), 0)
 Test.assertSimilar(kaprekarSplit(9), 1)
 Test.assertSimilar(kaprekarSplit(45), 2)
