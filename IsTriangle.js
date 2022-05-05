@@ -1,6 +1,6 @@
 function isTriangle(a,b,c) {
     let x = [a,b,c];
-    x.sort();
+    x.sort((a,b) => a-b);
     console.log(x);
     return x[0] + x[1] >= x[3];
 }
